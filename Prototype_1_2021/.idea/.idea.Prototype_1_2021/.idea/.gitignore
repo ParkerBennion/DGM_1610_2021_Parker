@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/contentModel.xml
+/projectSettingsUpdater.xml
+/.idea.Prototype_1_2021.iml
+# Datasource local storage ignored files
+/../../../../../../../:\TheGitFolder\DGM_1610_2021_Parker\Prototype_1_2021\.idea\.idea.Prototype_1_2021\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
