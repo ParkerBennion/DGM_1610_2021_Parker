@@ -1,18 +1,40 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float forwardButton, sideButton, speed = 30;
 
-    // Update is called once per frame
-    void Update()
+        void Start()
+        {
+            
+        }
+    
+        void Update()
     {
-        transform.Translate(0,0,5);
+        /*if (Input.GetKey(KeyCode.W))
+        {
+            transform.Translate(Vector3.forward * Time.deltaTime* speed);
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.Translate(Vector3.left * Time.deltaTime* speed);
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            transform.Translate(Vector3.back * Time.deltaTime* speed);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Translate(Vector3.right * Time.deltaTime* speed);
+        }*/
+
+        forwardButton = Input.GetAxis("Vertical");
+        sideButton = Input.GetAxis("Horizontal");
+        
+        transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardButton);
+        transform.Translate(Vector3.right * Time.deltaTime * speed * sideButton);
     }
 }
