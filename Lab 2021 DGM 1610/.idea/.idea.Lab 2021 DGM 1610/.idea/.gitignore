@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/projectSettingsUpdater.xml
+/contentModel.xml
+/.idea.Lab 2021 DGM 1610.iml
+/modules.xml
+# Datasource local storage ignored files
+/../../../../../../../:\TheGitFolder\DGM_1610_2021_Parker\Lab 2021 DGM 1610\.idea\.idea.Lab 2021 DGM 1610\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
