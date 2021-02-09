@@ -717,26 +717,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9965198, y: 3.0446577, z: 1}
   m_Center: {x: -0.0017404556, y: 1.5308795, z: 0}
---- !u!1 &1694963910 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 108642, guid: fc01a3bb589cebc4aa10892db165243b,
-    type: 3}
-  m_PrefabInstance: {fileID: 107922729}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1694963912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1694963910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3026c49383806c4a89810be935b7e6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 20
-  horoInput: 0
-  xRange: 0
-  projectileFab: {fileID: 0}
-  player: {x: 0, y: 0, z: 0}
