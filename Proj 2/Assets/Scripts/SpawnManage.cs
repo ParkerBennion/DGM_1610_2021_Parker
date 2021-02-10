@@ -13,12 +13,7 @@ public class SpawnManage : MonoBehaviour
     {
         InvokeRepeating(nameof(SpawnRate), spawnTime,spawnInterval);
     }
-
-    void Update()
-    {
-        
-    }
-
+    
     void SpawnRate()
     {
         int animalIndex = Random.Range(0, animalPrefabs.Length);
