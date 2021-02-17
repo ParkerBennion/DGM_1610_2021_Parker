@@ -5,15 +5,34 @@ using UnityEngine;
 
 public class CursorController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    private void Start()
+    public static CursorController instance;
+    public Texture2D crosHair, redCross;
+
+    private void Awake()
     {
-        Cursor.visible = false;
+        instance = this;
+        //Cursor.SetCursor(Croshair, Vector2.zero, CursorMode.ForceSoftware);
+        //Cursor.visible = false;
     }
 
-    void update()
+    public void CursorChanger()
     {
-        Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = cursorPos;
+        Cursor.SetCursor(crosHair, new Vector2(crosHair.width / 2, crosHair.height / 2), CursorMode.Auto);
     }
+
+    public void CursorChanger2()
+    {
+        Cursor.SetCursor(redCross, new Vector2(crosHair.width / 2, crosHair.height / 2), CursorMode.Auto);
+    }
+
+    public void CursorChanger3()
+    {
+        Cursor.SetCursor(null, Vector2.zero,CursorMode.Auto);
+    }
+
+/* void update()
+ {
+     Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+     transform.position = cursorPos;
+ }*/
 }
