@@ -28,5 +28,6 @@ public class Move : MonoBehaviour
         {
             Instantiate(projectileFab, transform.position, projectileFab.transform.rotation);
         }
+        
     }
 }
