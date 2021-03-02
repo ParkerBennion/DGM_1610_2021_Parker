@@ -90,9 +90,10 @@ GameObject:
   - component: {fileID: 4723280038724198362}
   - component: {fileID: 4723280038724198365}
   - component: {fileID: 4723280038724198360}
+  - component: {fileID: 9075963759086210432}
   m_Layer: 0
   m_Name: Prop_Barrier02
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,5 +152,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b11fbd9f8e00df4381cc522ccf17d37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 6
+--- !u!114 &9075963759086210432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4723280040127225387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5915cbc4826889744b50c5d3d152ac37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

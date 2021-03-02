@@ -9,6 +9,7 @@ public class Jump : MonoBehaviour
     public float jumpforce;
     public float gravForce;
     public bool jumpAvailable;
+    public bool gameOver;
     void Start()
     {
         FoxRb = GetComponent<Rigidbody>();
@@ -28,6 +29,14 @@ public class Jump : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        jumpAvailable = true;
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            jumpAvailable = true;
+        }
+        else if (other.gameObject.CompareTag("obstacle"))
+        {
+            gameOver = true;
+            Debug.Log("game over");
+        }
     }
 }
