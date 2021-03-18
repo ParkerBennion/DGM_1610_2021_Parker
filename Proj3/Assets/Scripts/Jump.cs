@@ -6,6 +6,7 @@ using UnityEngine;
 public class Jump : MonoBehaviour
 {
     private Rigidbody FoxRb;
+    private Animator playerAnim;
     public float jumpforce;
     public float gravForce;
     public bool jumpAvailable;
@@ -13,6 +14,7 @@ public class Jump : MonoBehaviour
     void Start()
     {
         FoxRb = GetComponent<Rigidbody>();
+        playerAnim = GetComponent<Animator>();
         Physics.gravity *= gravForce;
         jumpAvailable = true;
     }
@@ -20,10 +22,11 @@ public class Jump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && jumpAvailable)
+        if (Input.GetKeyDown(KeyCode.Space) && jumpAvailable && gameOver != true)// or !gameOver
         {
             FoxRb.AddForce(Vector3.up * jumpforce, ForceMode.Impulse);
             jumpAvailable = false;
+            playerAnim.SetTrigger("Jump_trig");
         }
     }
 
@@ -37,6 +40,8 @@ public class Jump : MonoBehaviour
         {
             gameOver = true;
             Debug.Log("game over");
+            playerAnim.SetBool("Death_b",true);
+            playerAnim.SetInteger("DeathType_int",2);
         }
     }
 }
