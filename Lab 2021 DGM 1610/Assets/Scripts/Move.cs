@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    public float gravForce, jumpForce, speed, xBound;
+    public float gravForce, jumpForce, speed, xBound, dJump;
     public bool jumpAvailable;
+    public bool doubleJump;
     private Rigidbody playerRB;
 
     void Start()
@@ -14,6 +15,7 @@ public class Move : MonoBehaviour
         playerRB = GetComponent<Rigidbody>();
         Physics.gravity *= gravForce;
         jumpAvailable = true;
+        doubleJump = false;
     }
     
     void Update()
@@ -51,6 +53,13 @@ public class Move : MonoBehaviour
         {
             playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             jumpAvailable = false;
+            doubleJump = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.W) && !jumpAvailable && doubleJump)
+        {
+            playerRB.velocity = transform.up * Time.deltaTime* dJump;
+            doubleJump = false;
         }
         //lets do a double jump >> reference the dog fetch timer script maybe
         
@@ -59,5 +68,6 @@ public class Move : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         jumpAvailable = true;
+        doubleJump = false;
     }
 }

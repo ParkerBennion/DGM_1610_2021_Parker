@@ -1159,7 +1159,9 @@ MonoBehaviour:
   jumpForce: 15
   speed: 5
   xBound: 8
+  dJump: 2000
   jumpAvailable: 0
+  doubleJump: 0
 --- !u!54 &976391565
 Rigidbody:
   m_ObjectHideFlags: 0
