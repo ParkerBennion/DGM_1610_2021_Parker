@@ -11,10 +11,14 @@ public class Jump : MonoBehaviour
     public float gravForce;
     public bool jumpAvailable;
     public bool gameOver;
+    public ParticleSystem pof,dirt;
+    public AudioClip jumpSound, crashSound;
+    public AudioSource PlayerAudio;
     void Start()
     {
         FoxRb = GetComponent<Rigidbody>();
         playerAnim = GetComponent<Animator>();
+        PlayerAudio = GetComponent<AudioSource>();
         Physics.gravity *= gravForce;
         jumpAvailable = true;
     }
@@ -27,6 +31,8 @@ public class Jump : MonoBehaviour
             FoxRb.AddForce(Vector3.up * jumpforce, ForceMode.Impulse);
             jumpAvailable = false;
             playerAnim.SetTrigger("Jump_trig");
+            dirt.Stop();
+            PlayerAudio.PlayOneShot(jumpSound,1.0f);
         }
     }
 
@@ -35,6 +41,7 @@ public class Jump : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             jumpAvailable = true;
+            dirt.Play();
         }
         else if (other.gameObject.CompareTag("obstacle"))
         {
@@ -42,6 +49,9 @@ public class Jump : MonoBehaviour
             Debug.Log("game over");
             playerAnim.SetBool("Death_b",true);
             playerAnim.SetInteger("DeathType_int",2);
+            pof.Play();
+            dirt.Stop();
+            PlayerAudio.PlayOneShot(crashSound,1.0f);
         }
     }
 }

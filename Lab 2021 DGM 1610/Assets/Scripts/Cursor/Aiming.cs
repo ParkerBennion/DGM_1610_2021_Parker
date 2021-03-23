@@ -28,12 +28,12 @@ public class Aiming : MonoBehaviour
         Vector3 ready = Input.mousePosition;
         ready = Camera.main.ScreenToWorldPoint(ready);
 
-        Vector2 direction = new Vector3(
-            ready.x - transform.position.x,
-            ready.y - transform.position.y,
-            ready.z - transform.position.z);
-        transform.forward = direction;
-        
+         Vector3 direction = new Vector3(
+             ready.x - transform.position.x,
+             ready.y - transform.position.y,
+             ready.z = 8.3f);
+         transform.forward = direction;
+
     }
     
 
