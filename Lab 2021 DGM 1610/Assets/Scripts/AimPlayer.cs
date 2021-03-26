@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class AimPlayer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        aimAtPlayer();
+    }
+
+    void aimAtPlayer()
+    {
+        Vector3 direction = new Vector3()
     }
 }

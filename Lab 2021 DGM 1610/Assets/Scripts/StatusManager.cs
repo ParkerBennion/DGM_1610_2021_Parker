@@ -7,12 +7,18 @@ public class StatusManager : MonoBehaviour
 {
     public int maxHealth = 5;
     public int currentHealth;
+    //private Vector3 playerLocation;
 
     public Health healthBar;
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.MaxHealth(maxHealth);
+    }
+
+    private void Update()
+    {
+        Vector3 here = transform.position;
     }
 
     private void OnCollisionEnter(Collision other)
