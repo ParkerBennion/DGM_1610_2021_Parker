@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,16 +15,15 @@ public class StatusManager : MonoBehaviour
         healthBar.MaxHealth(maxHealth);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter(Collision other)
     {
-        if (Input.GetKeyDown(KeyCode.X))
+        if (other.gameObject.CompareTag("bulletE"))
         {
             Damager(1);
         }
     }
 
-    void Damager(int damage)
+    public void Damager(int damage)
     {
         currentHealth -= damage;
         healthBar.MakeHealth(currentHealth);
