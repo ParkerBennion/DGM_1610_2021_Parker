@@ -6,6 +6,8 @@ TagManager:
   tags:
   - bullet
   - bulletE
+  - PlayerBullet
+  - OB
   layers:
   - Default
   - TransparentFX

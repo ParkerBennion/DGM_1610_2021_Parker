@@ -10,7 +10,10 @@ public class Spawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        for (int i = 0; i < UPPER; i++)
+        {
+            
+        }
         Instantiate(enemyFab, GenSpawnPos(), enemyFab.transform.rotation);
     }
 

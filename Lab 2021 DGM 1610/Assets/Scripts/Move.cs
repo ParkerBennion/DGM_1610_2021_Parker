@@ -9,6 +9,7 @@ public class Move : MonoBehaviour
     public bool jumpAvailable;
     public bool doubleJump;
     private Rigidbody playerRB;
+    public static Vector3 playerPositoin;
 
     void Start()
     { 
@@ -20,6 +21,7 @@ public class Move : MonoBehaviour
     
     void Update()
     {
+        playerPositoin = transform.position;
         //forwardButton = Input.GetAxis("Vertical");
         //sideButton = Input.GetAxis("Horizontal");
         

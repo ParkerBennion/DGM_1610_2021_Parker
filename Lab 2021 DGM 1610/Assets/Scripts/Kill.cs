@@ -5,24 +5,24 @@ using UnityEngine;
 
 public class Kill : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        Destroy(gameObject);
-        /*if (other.gameObject.CompareTag("bullet"))
+        if (other.CompareTag("PlayerBullet"))
         {
             Destroy(gameObject);
-        }*/
+        }
+        else if (other.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+        else if (other.CompareTag("OB"))
+        {
+            Destroy(gameObject);
+        }
+
+        
+        
+        
     }
 }
