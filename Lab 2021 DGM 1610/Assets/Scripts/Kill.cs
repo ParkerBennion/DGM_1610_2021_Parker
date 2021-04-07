@@ -11,6 +11,7 @@ public class Kill : MonoBehaviour
         if (other.CompareTag("PlayerBullet"))
         {
             Destroy(gameObject);
+            ScoreKeeper.Score++;
         }
         else if (other.CompareTag("Player"))
         {
