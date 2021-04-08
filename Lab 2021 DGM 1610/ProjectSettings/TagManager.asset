@@ -8,6 +8,7 @@ TagManager:
   - bulletE
   - PlayerBullet
   - OB
+  - SilkScreen
   layers:
   - Default
   - TransparentFX
