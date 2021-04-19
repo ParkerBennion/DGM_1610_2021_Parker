@@ -18,12 +18,6 @@ public class GameManager : MonoBehaviour
     public Button restartButton;
     public GameObject titleScreen;
 
-
-    private void Start()
-    {
-        
-    }
-
     public void UpdateScore(int scoreToAdd)
     {
         score += scoreToAdd;

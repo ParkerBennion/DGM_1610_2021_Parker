@@ -15,13 +15,6 @@ public class DifficultyButton : MonoBehaviour
         _button.onClick.AddListener(SetDifficulty);
         
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void SetDifficulty()
     {
         Debug.Log(_button.gameObject.name + " was clicked");
